@@ -147,6 +147,7 @@ of attributes of geometries. For instance, you can:
 Creating a point geometry object is easy: simply pass coordinates (x, y, and
 possibly z) to its [constructor](https://pythonbasics.org/constructor/).
 
+
 ```{code-cell}
 # Import `shapely.geometry.Point` class
 from shapely.geometry import Point
@@ -157,8 +158,7 @@ point2 = Point(7.2, -25.1)
 point3 = Point(9.26, -2.456)
 point4_3D = Point(9.26, -2.456, 0.57)
 ```
-
-Let’s see what these variables now contain:
+%%Let’s see what these variables now contain:
 
 ```{code-cell}
 point1
