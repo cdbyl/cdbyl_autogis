@@ -446,6 +446,7 @@ We can also construct the polygon directly from a list of points:
 
 ```{code-cell}
 polygon2 = Polygon([point1, point2, point3])
+    #este metodo no me funcionó
 ```
 
 … or from a [`LinearRing`](https://shapely.readthedocs.io/en/stable/manual.html#linearrings)
@@ -511,7 +512,7 @@ can use:
 :::
 
 ```{code-cell}
-:tags: ["hide-output"]
+#:tags: ["hide-output"]
 
 # Check the help for Polygon objects:
 help(Polygon)
@@ -585,7 +586,14 @@ Plot these shapes using shapely!
 - **Triangle**
 - **Square**
 - **Circle**
-
+```{code-cell}
+# Pentagon 
+pent=Polygon([(30, 2.01), (31.91, 0.62), (31.18, -1.63), (28.82, -1.63), (28.09, 0.62)])
+# Triangle
+tria=Polygon([(30, 2.01), (31.91, 0.62), (31.18, -1.63)])
+# Square
+squa=Polygon([(30, 20), (15, 20),(15, 5), (30,5)])
+```
 
 ```{code-cell}
 # Pentagon 
