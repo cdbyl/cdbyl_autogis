@@ -267,7 +267,7 @@ print(point2)
 dist = point1.distance(point2)
 
 # Print out a nicely formatted info message
-print(f"Distance between the points is {dist:.2f} units")
+print(f"Distance between the points is {dist:.2f} units") #aca dice que la variable dist la escriba con 2 decimales float
 ```
 
 :::{caution}
