@@ -431,7 +431,7 @@ points, or a `LinearRing`, and will form the outer hull of the new polygon. The
 second, optional, parameter `holes` can be a list of holes to cut out of
 `shell` (the items in the list can be the same data types as `shell`).
 
-For now, let’s create a simple polygon without any holes. The first example
+For now,let’s create a simple polygon without any holes. The first example
 uses **(at least three) coordinate tuples** (three points are required to form
 a surface):
 
