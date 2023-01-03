@@ -49,7 +49,7 @@ that contains the geometries (points, lines, polygons, ...) as
 `shapely.geometry` objects.
 
 ```{code-cell} ipython3
-:tags: [remove-input]
+#:tags: [remove-input]
 
 import pathlib
 import geopandas
@@ -271,8 +271,17 @@ Use your pandas skills on this geopandas data set to figure out the following
 information:
 
 - How many rows does the data set have?
+```
+len(data)
+```
 - How many unique classes?
+```
+data['CLASS'].nunique()
+```
 - ... and how many unique groups?
+```
+data['GROUP'].nunique()
+```
 :::
 
 
@@ -308,7 +317,7 @@ in a column called *geometry*.
 Let’s print the first 5 rows of the column `geometry`:
 
 ```{code-cell} ipython3
-data.geometry.head()
+data.geometry.head() # data["geometry"].head() funciona tambien
 ```
 
 Lo and behold, the `geometry` column contains familiar-looking values:
@@ -327,7 +336,7 @@ first record, only:
 
 ```{code-cell} ipython3
 # The value of the column `geometry` in row 0:
-data.at[0, "geometry"]
+data.at[0, "geometry"] # literalmente "en fila 0 columna geometry"
 ```
 
 ```{code-cell} ipython3
@@ -350,7 +359,7 @@ of the Geo-Python course](https://geo-python.github.io/site/notebooks/L6/pandas/
 
 ```{code-cell} ipython3
 # Iterate over the first 5 rows of the data set
-for index, row in data[:5].iterrows():
+for index, row in data[:15].iterrows():
     polygon_area = row["geometry"].area
     print(f"The polygon in row {index} has a surface area of {polygon_area:0.1f} m².")
 ```
@@ -388,7 +397,19 @@ Do you remember how to calculate the *minimum*, *maximum*, *sum*, *mean*, and
 Geo-Python](https://geo-python-site.readthedocs.io/en/latest/notebooks/L5/exploring-data-using-pandas.html#descriptive-statistics))
 What are these values for the area column of the data set?
 :::
-
+```
+data["area"].min()
+```
+data["area"].max()
+```
+data["area"].sum()
+```
+data["area"].mean()
+```
+data["area"].median()
+```
+data["area"].std()
+```
 
 
 ## Write a subset of data to a file

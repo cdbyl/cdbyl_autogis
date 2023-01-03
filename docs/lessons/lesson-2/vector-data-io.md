@@ -122,7 +122,7 @@ nuts_regions.head()
 ```
 
 ```{code-cell}
-:tags: ["remove-input", "remove-output"]
+#:tags: ["remove-input", "remove-output"]
 nuts_regions = geopandas.read_file(DATA_DIRECTORY / "europe_nuts_regions.geojson")
 nuts_regions.head()
 ```
@@ -199,7 +199,7 @@ population_grid.head()
 ```
 
 ```{code-cell}
-:tags: ["remove-input"]
+#:tags: ["remove-input"]
 
 population_grid = geopandas.read_file(
     "https://avoidatastr.blob.core.windows.net/avoindata/AvoinData/"
